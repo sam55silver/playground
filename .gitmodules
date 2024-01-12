@@ -1,0 +1,3 @@
+[submodule "chat/renet"]
+	path = chat/renet
+	url = https://github.com/TrustNoOneElse/renet.git
