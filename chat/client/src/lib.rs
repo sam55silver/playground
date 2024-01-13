@@ -22,7 +22,7 @@ impl ChatApp {
         let connection_config = ConnectionConfig::default();
         let renet_client = RenetClient::new(connection_config);
 
-        let web_transport_client = WebTransportClient::new("https://172.20.17.234:3080", None).await?;
+        let web_transport_client = WebTransportClient::new("https://localhost:3080", None).await?;
         log(&"Web transport client created".into());
 
         Ok(ChatApp {

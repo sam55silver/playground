@@ -13,10 +13,10 @@ use renet_webtransport_server::{WebTransportConfig, WebTransportServer};
 #[tokio::main]
 async fn main() {
     env_logger::builder().filter_level(log::LevelFilter::Info).init();
-    for addr in tokio::net::lookup_host("172.20.17.234:3080").await.unwrap() {
+    for addr in tokio::net::lookup_host("localhost:3080").await.unwrap() {
         println!("socket address is {}", addr);
     }
-    let future = server("172.20.17.234:3080".parse().unwrap());
+    let future = server("127.0.0.1:3080".parse().unwrap());
     block_on(future);
 }
 
